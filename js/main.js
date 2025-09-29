@@ -1,8 +1,9 @@
 // Navbar con fondo dinámico al hacer scroll
-window.addEventListener("scroll", function() {
+/*window.addEventListener("scroll", function() {
   const navbar = document.querySelector(".navbar-custom");
   navbar.classList.toggle("scrolled", window.scrollY > 50);
-});
+});*/
+
 document.addEventListener("DOMContentLoaded", function () {
   let empresasCarousel = document.querySelector("#empresasCarousel");
   let carousel = new bootstrap.Carousel(empresasCarousel, {

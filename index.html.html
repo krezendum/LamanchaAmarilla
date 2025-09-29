@@ -16,10 +16,14 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
+<!-- Favicon clásico -->
+ <link rel="icon" type="image/png" sizes="32x32" href="img/taxi.webp">
+<link rel="icon" type="image/png" sizes="16x16" href="img/taxi.webp">
+<link rel="apple-touch-icon" sizes="180x180" href="img/taxi.webp">
 
 </head>
 <body>
-  <!-- HEADER -->
+<!-- HEADER -->
 <header>
   <!-- Top Bar -->
   <div class="top-bar">
@@ -28,11 +32,11 @@
       <a href="#">iOS App</a>
     </div>
     <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.facebook.com/lamanchaamarilla/?locale=es_LA"><i class="fab fa-facebook-f"></i></a>
       <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
-      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.instagram.com/lamanchaamarilla/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@lamanchaamarilla"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.tiktok.com/@johnnyrangellma"><i class="fab fa-tiktok"></i></a>
       <a href="#"><i class="fab fa-whatsapp"></i></a>
     </div>
   </div>
@@ -41,16 +45,16 @@
   <nav class="navbar">
     <!-- Logo -->
     <div class="logo">
-      <img src="ruta-de-tu-logo.png" alt="Logo" />
+      <img src="img/ManchaAmarilla-Nav.png" alt="Logo" />
     </div>
 
     <!-- Menú -->
     <ul class="nav-links" id="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Programs</a></li>
-      <li><a href="#">Pages</a></li>
-      <li><a href="#">Contact Us</a></li>
+      <li><a href="#Hero" class="menu-link">Inicio</a></li>
+      <li><a href="#servicios" class="menu-link">Servicio</a></li>
+      <li><a href="#Sobre-Nosotros" class="menu-link">Sobre Nosotros </a></li>
+      <li><a href="#contacto" class="menu-link">Unete</a></li>
+      <li><a href="#" class="menu-link">Iniciar Seccion</a></li>
     </ul>
 
     <!-- Menú hamburguesa (móvil) -->
@@ -60,20 +64,18 @@
   </nav>
 </header>
 
-
-
 <!-- HERO SECTION -->
 <!-- HERO SECTION -->
-<section class="hero position-relative">
+<section id="Hero" class="hero position-relative">
   <video autoplay muted loop playsinline class="hero-video">
-    <source src="play/hero.mp4" type="video/mp4">
+    <source src="play/hero2.mp4" type="video/mp4">
     Tu navegador no soporta videos HTML5.
   </video>
 
   <div class="hero-overlay d-flex flex-column justify-content-center align-items-center text-center">
     <h1>Bienvenido a La Mancha Amarilla</h1>
     <p>Transformando el transporte individual con innovación, seguridad y compromiso social.</p>
-    <a href="#unete" class="btn-hero mt-3">Registrarse</a>
+    <a href="#" class="btn-hero mt-3">Registrarse</a>
   </div>
 </section>
 
@@ -82,47 +84,46 @@
 <section id="servicios" class="py-5">
   <div class="container text-center">
     <h2 class="section-title mb-5">Nuestros Servicios</h2>
-    <div class="row">
+
+    <!-- Contenedor de servicios -->
+    <div class="services-container">
+      
       <!-- Tarjeta 1 -->
-      <div class="col-md-3">
-        <div class="card servicio-card h-100">
-          <img src="img/servicio1.png" class="card-img-top" alt="Servicio 1">
-          <div class="card-body">
-            <h5 class="card-title">Califique al Taxista</h5>
-            <p class="card-text">Espacio donde los usuarios pueden evaluar el servicio de los taxistas.</p>
-          </div>
+      <div class="card servicio-card h-100">
+        <img src="img/servicio1.png" class="card-img-top" alt="Servicio 1">
+        <div class="card-body">
+          <h5 class="card-title">Califique al Taxista</h5>
+          <p class="card-text">Espacio donde los usuarios pueden evaluar el servicio de los taxistas.</p>
         </div>
       </div>
+
       <!-- Tarjeta 2 -->
-      <div class="col-md-3">
-        <div class="card servicio-card h-100">
-          <img src="img/servicio2.png" class="card-img-top" alt="Servicio 2">
-          <div class="card-body">
-            <h5 class="card-title">Reportar objetos olvidados</h5>
-            <p class="card-text">Formulario donde los usuarios puedan reportar objetos olvidados en taxis. </p>
-          </div>
+      <div class="card servicio-card h-100">
+        <img src="img/servicio2.png" class="card-img-top" alt="Servicio 2">
+        <div class="card-body">
+          <h5 class="card-title">Reportar objetos olvidados</h5>
+          <p class="card-text">Formulario donde los usuarios puedan reportar objetos olvidados en taxis.</p>
         </div>
       </div>
+
       <!-- Tarjeta 3 -->
-      <div class="col-md-3">
-        <div class="card servicio-card h-100">
-          <img src="img/servicio3.png" class="card-img-top" alt="Servicio 3">
-          <div class="card-body">
-            <h5 class="card-title">Bolsa de Empleo</h5>
-            <p class="card-text">espacio para conectar a propietarios de taxis con conductores en busca de oportunidades laborales.</p>
-          </div>
+      <div class="card servicio-card h-100">
+        <img src="img/servicio3.png" class="card-img-top" alt="Servicio 3">
+        <div class="card-body">
+          <h5 class="card-title">Bolsa de Empleo</h5>
+          <p class="card-text">Espacio para conectar a propietarios de taxis con conductores en busca de oportunidades laborales.</p>
         </div>
       </div>
+
       <!-- Tarjeta 4 -->
-      <div class="col-md-3">
-        <div class="card servicio-card h-100">
-          <img src="img/servicio4.png" class="card-img-top" alt="Servicio 4">
-          <div class="card-body">
-            <h5 class="card-title">Club Familiar</h5>
-            <p class="card-text">Para consolidar la integración gremial y Familiar. Hemos realizado eventos con este objetivo y ahora lo haremos con más frecuencia.</p>
-          </div>
+      <div class="card servicio-card h-100">
+        <img src="img/servicio4.png" class="card-img-top" alt="Servicio 4">
+        <div class="card-body">
+          <h5 class="card-title">Club Familiar</h5>
+          <p class="card-text">Para consolidar la integración gremial y familiar, hemos realizado eventos con este objetivo y ahora lo haremos con más frecuencia.</p>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -202,7 +203,7 @@
 </section>
 
 <!-- ================= QUIÉNES SOMOS (CSS-only slider) ================= -->
-<section class="quienes-section" aria-label="Quienes somos - Misión, Visión, Valores">
+<section id="Sobre-Nosotros"  class="quienes-section" aria-label="Quienes somos - Misión, Visión, Valores">
   <div class="quienes-slider">
 
     <!-- radios (controlan qué slide se muestra) -->
@@ -331,7 +332,7 @@
 </section>
 
 <!-- ================= ÚNETE A LA MANCHA AMARILLA ================= -->
-<section id="unete" class="unete-section py-5">
+<section id="contacto" class="unete-section py-5">
   <div class="container">
     <div class="row align-items-center">
       
@@ -378,9 +379,13 @@
   <div class="container">
     <div class="row">
       
-      <!-- Columna izquierda (Logo + descripción) -->
-      <div class="col-lg-4 col-md-6 footer-about">
-        <img src="img/logo.png" alt="La Mancha Amarilla" class="footer-logo mb-3">
+      <!-- Columna 1: Logo -->
+      <div class="col-lg-3 col-md-6 footer-logo text-center mb-4 mb-lg-0">
+        <img src="img/taxi.webp" alt="Logo La Mancha Amarilla" class="footer-logo-img">
+      </div>
+
+      <!-- Columna 2: Descripción -->
+      <div class="col-lg-3 col-md-6 footer-about mb-4 mb-lg-0">
         <p>
           La Mancha Amarilla es un proyecto pensado para mejorar el servicio de transporte en taxis,
           fomentando una comunidad cívico-social que apoya a conductores y pasajeros con un servicio
@@ -388,8 +393,8 @@
         </p>
       </div>
 
-      <!-- Columna centro (Dirección + contacto) -->
-      <div class="col-lg-4 col-md-6 footer-contact">
+      <!-- Columna 3: Información de Contacto -->
+      <div class="col-lg-3 col-md-6 footer-contact mb-4 mb-lg-0">
         <h5>Información de Contacto</h5>
         <ul>
           <li><strong>Dirección:</strong> Calle 5 #10-23, Cali - Colombia</li>
@@ -398,18 +403,19 @@
         </ul>
       </div>
 
-      <!-- Columna derecha (Redes sociales en grid) -->
-      <div class="col-lg-4 col-md-12 footer-social">
+      <!-- Columna 4: Redes Sociales -->
+      <div class="col-lg-3 col-md-6 footer-social">
         <h5>Síguenos</h5>
         <div class="social-grid">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.facebook.com/lamanchaamarilla/?locale=es_LA"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.instagram.com/lamanchaamarilla/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@lamanchaamarilla"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.tiktok.com/@johnnyrangellma"><i class="fab fa-tiktok"></i></a>
           <a href="#"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
+
     </div>
   </div>
 
@@ -418,9 +424,6 @@
     <p>© 2025 La Mancha Amarilla. Todos los derechos reservados.</p>
   </div>
 </footer>
-
-
-
 
 </body>
 
@@ -458,11 +461,20 @@ volumeSlider.addEventListener("input", (e) => {
 
 
  // menu responsive 
-  const toggle = document.getElementById('menu-toggle');
+  const menuToggle = document.getElementById('menu-toggle');
   const navLinks = document.getElementById('nav-links');
+  const menuItems = document.querySelectorAll('.menu-link');
 
-  toggle.addEventListener('click', () => {
+  // abrir/cerrar con hamburguesa
+  menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+  });
+
+  // cerrar al hacer clic en cualquier link
+  menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
   });
 
 //======================TESTIMONIOS=================================
@@ -489,7 +501,21 @@ volumeSlider.addEventListener("input", (e) => {
       1024: { slidesPerView: 3 }
     }
   });
-
+// efecto scroll en navegador 
+  document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const destino = document.querySelector(this.getAttribute("href"));
+      if (destino) {
+        window.scrollTo({
+          top: destino.offsetTop - 80, // 👈 resta la altura del navbar fijo
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+});
 
 </script>
 
