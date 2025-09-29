@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Mancha Amarilla</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- TESTIMONIOS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+
+</head>
+<body>
+  <!-- HEADER -->
+<header>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="apps">
+      <a href="#">Android App</a> | 
+      <a href="#">iOS App</a>
+    </div>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+  <!-- Main Navbar -->
+  <nav class="navbar">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="ruta-de-tu-logo.png" alt="Logo" />
+    </div>
+
+    <!-- Menú -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Programs</a></li>
+      <li><a href="#">Pages</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+
+    <!-- Menú hamburguesa (móvil) -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+</header>
+
+
+
+<!-- HERO SECTION -->
+<!-- HERO SECTION -->
+<section class="hero position-relative">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="play/hero.mp4" type="video/mp4">
+    Tu navegador no soporta videos HTML5.
+  </video>
+
+  <div class="hero-overlay d-flex flex-column justify-content-center align-items-center text-center">
+    <h1>Bienvenido a La Mancha Amarilla</h1>
+    <p>Transformando el transporte individual con innovación, seguridad y compromiso social.</p>
+    <a href="#unete" class="btn-hero mt-3">Registrarse</a>
+  </div>
+</section>
+
+
+<!-- ================== NUESTROS SERVICIOS ================== -->
+<section id="servicios" class="py-5">
+  <div class="container text-center">
+    <h2 class="section-title mb-5">Nuestros Servicios</h2>
+    <div class="row">
+      <!-- Tarjeta 1 -->
+      <div class="col-md-3">
+        <div class="card servicio-card h-100">
+          <img src="img/servicio1.png" class="card-img-top" alt="Servicio 1">
+          <div class="card-body">
+            <h5 class="card-title">Califique al Taxista</h5>
+            <p class="card-text">Espacio donde los usuarios pueden evaluar el servicio de los taxistas.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Tarjeta 2 -->
+      <div class="col-md-3">
+        <div class="card servicio-card h-100">
+          <img src="img/servicio2.png" class="card-img-top" alt="Servicio 2">
+          <div class="card-body">
+            <h5 class="card-title">Reportar objetos olvidados</h5>
+            <p class="card-text">Formulario donde los usuarios puedan reportar objetos olvidados en taxis. </p>
+          </div>
+        </div>
+      </div>
+      <!-- Tarjeta 3 -->
+      <div class="col-md-3">
+        <div class="card servicio-card h-100">
+          <img src="img/servicio3.png" class="card-img-top" alt="Servicio 3">
+          <div class="card-body">
+            <h5 class="card-title">Bolsa de Empleo</h5>
+            <p class="card-text">espacio para conectar a propietarios de taxis con conductores en busca de oportunidades laborales.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Tarjeta 4 -->
+      <div class="col-md-3">
+        <div class="card servicio-card h-100">
+          <img src="img/servicio4.png" class="card-img-top" alt="Servicio 4">
+          <div class="card-body">
+            <h5 class="card-title">Club Familiar</h5>
+            <p class="card-text">Para consolidar la integración gremial y Familiar. Hemos realizado eventos con este objetivo y ahora lo haremos con más frecuencia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================== EMPRESAS ================== -->
+<section id="empresas" class="py-5">
+  <div class="container text-center">
+    <h2 class="section-title mb-5">EMPRESAS QUE TRABAJAN CON NOSOTROS</h2>
+
+    <div id="empresasCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+      <div class="carousel-inner">
+
+        <!-- Grupo 1 -->
+        <div class="carousel-item active">
+          <div class="row g-4 justify-content-center">
+            <div class="col-6 col-md-3">
+              <div class="empresa-card">
+                <img src="img/valcali.webp" alt="Valcali">
+                <p>Valcali</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="empresa-card">
+                <img src="img/toro-autos.webp" alt="Toro Autos">
+                <p>Toro Autos</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="empresa-card">
+                <img src="img/taxis-y-autos-cali.webp" alt="Taxis y Autos Cali">
+                <p>Taxis y Autos Cali</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="empresa-card">
+                <img src="img/Logo-Tx-plus.webp" alt="TX Plus">
+                <p>TX Plus</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grupo 2 -->
+        <div class="carousel-item">
+          <div class="row g-4 justify-content-center">
+            <div class="col-6 col-md-3">
+              <div class="empresa-card">
+                <img src="img/asotaba.webp" alt="Asotaba">
+                <p>Asotaba</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="empresa-card">
+                <img src="img/servitaxis.webp" alt="ServiTaxis">
+                <p>ServiTaxis</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="empresa-card">
+                <img src="img/radio-taxi-california.webp" alt="Radio Taxi California">
+                <p>Radio Taxi California</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="empresa-card">
+                <img src="img/logo-taxis-libres.webp" alt="Taxis Libres">
+                <p>Taxis Libres</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUIÉNES SOMOS (CSS-only slider) ================= -->
+<section class="quienes-section" aria-label="Quienes somos - Misión, Visión, Valores">
+  <div class="quienes-slider">
+
+    <!-- radios (controlan qué slide se muestra) -->
+    <input type="radio" name="qs-slide" id="qs-s1" checked>
+    <input type="radio" name="qs-slide" id="qs-s2">
+    <input type="radio" name="qs-slide" id="qs-s3">
+
+    <!-- contenedor de slides -->
+    <div class="slides">
+
+      <!-- SLIDE 1 - MISIÓN -->
+      <article class="slide s1">
+        <div class="left">
+          <img src="img/mision.png" alt="Misión — La Mancha Amarilla" loading="lazy">
+          <label class="click-area" for="qs-s2"></label>
+        </div>
+        <div class="right">
+          <h2>Misión</h2>
+          <p>
+            Ser una plataforma pedagógica y sostenible, diseñada para dignificar el transporte individual tipo taxi,
+            promoviendo un servicio eficiente, seguro y amable. Nuestro enfoque social y cívico busca impactar positivamente
+            en la calidad de vida de conductores y usuarios, contribuyendo al desarrollo social y económico de la región.
+          </p>
+          <label class="click-area-text" for="qs-s2"></label>
+        </div>
+      </article>
+
+      <!-- SLIDE 2 - VISIÓN -->
+      <article class="slide s2">
+        <div class="left">
+          <img src="img/vision.png" alt="Visión — La Mancha Amarilla" loading="lazy">
+          <label class="click-area" for="qs-s3"></label>
+        </div>
+        <div class="right">
+          <h2>Visión</h2>
+          <p>
+            Posicionarnos como la principal plataforma tecnológica cívico-social en el sector de transporte público individual
+            en Colombia. Aspiramos a liderar la transformación del servicio de taxi, garantizando excelencia, seguridad
+            y satisfacción para conductores y usuarios, siendo reconocidos como un modelo de innovación y calidad a nivel nacional.
+          </p>
+          <label class="click-area-text" for="qs-s3"></label>
+        </div>
+      </article>
+
+      <!-- SLIDE 3 - VALORES -->
+      <article class="slide s3">
+        <div class="left">
+          <img src="img/valores.png" alt="Valores — La Mancha Amarilla" loading="lazy">
+          <label class="click-area" for="qs-s1"></label>
+        </div>
+        <div class="right">
+          <h2>Valores</h2>
+          <p>
+            Compromiso: Trabajamos con dedicación para brindar un servicio confiable y eficiente.
+            <br><br>
+            Innovación: Incorporamos herramientas tecnológicas que mejoran la experiencia del usuario y del conductor.
+            <br><br>
+            Responsabilidad social: Fomentamos el respeto y el buen trato entre la comunidad y los conductores.
+            <br><br>
+            Calidad: Nos enfocamos en garantizar altos estándares en todos los aspectos del servicio.
+            <br><br>
+            Seguridad: Priorizamos la tranquilidad de los usuarios y conductores en cada interacción.
+          </p>
+          <label class="click-area-text" for="qs-s1"></label>
+        </div>
+      </article>
+
+    </div> <!-- .slides -->
+
+    <!-- dots (indicadores manuales) -->
+    <div class="qs-dots" role="tablist" aria-label="Navegación Quiénes somos">
+      <label for="qs-s1" class="dot" aria-label="Misión" role="tab"></label>
+      <label for="qs-s2" class="dot" aria-label="Visión" role="tab"></label>
+      <label for="qs-s3" class="dot" aria-label="Valores" role="tab"></label>
+    </div>
+
+  </div> <!-- .quienes-slider -->
+</section>
+
+
+<!-- ================= TESTIMONIOS ================= -->
+<section class="testimonials">
+  <div class="container">
+    <h2 class="section-title">Lo que dicen nuestros usuarios</h2>
+    <p class="section-subtitle">Conoce la experiencia de quienes usan nuestros servicios de taxi</p>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        
+        <!-- Testimonio 1 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="quote">“</div>
+            <p>El servicio ha mejorado mucho, los conductores son amables y los taxis llegan rápido. Muy recomendado.</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+
+        <!-- Testimonio 2 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="quote">“</div>
+            <p>Una experiencia segura y confiable, me siento tranquila usando el servicio todos los días.</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+
+        <!-- Testimonio 3 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="quote">“</div>
+            <p>Excelente aplicación, muy intuitiva y el servicio de atención es rápido y efectivo.</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+
+        <!-- Puedes agregar más testimonios -->
+      </div>
+
+      <!-- Paginación y flechas -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ÚNETE A LA MANCHA AMARILLA ================= -->
+<section id="unete" class="unete-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Texto -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h2 class="fw-bold mb-3">Únete a La Mancha Amarilla</h2>
+        <p>
+          Forma parte de nuestra comunidad cívico-social y contribuye al cambio positivo en el transporte.
+        </p>
+        <p>
+          Nuestro programa es transmitido desde Cali de lunes a viernes de 6 a 8 pm.
+        </p>
+        <p>
+          Invitamos a gremios de otras ciudades para transmitir en la emisora, contáctanos para más detalles.
+        </p>
+        <button class="btn btn-warning fw-bold">Registrarse</button>
+      </div>
+
+      <!-- Imagen -->
+      <div class="col-lg-6 text-center">
+        <img src="img/unete.png" alt="Taxis La Mancha Amarilla" class="img-fluid rounded shadow">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Player emisora -->
+<!-- 🔹 Radio Player Fijo Abajo -->
+<div class="radio-player">
+  <button id="playBtn"><i class="fas fa-play"></i></button>
+
+  <div class="volume-control">
+    <button id="volumeBtn"><i class="fas fa-volume-up"></i></button>
+    <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.5">
+  </div>
+
+  <audio id="radio" src="https://tuservidor.com/stream.mp3"></audio>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      
+      <!-- Columna izquierda (Logo + descripción) -->
+      <div class="col-lg-4 col-md-6 footer-about">
+        <img src="img/logo.png" alt="La Mancha Amarilla" class="footer-logo mb-3">
+        <p>
+          La Mancha Amarilla es un proyecto pensado para mejorar el servicio de transporte en taxis,
+          fomentando una comunidad cívico-social que apoya a conductores y pasajeros con un servicio
+          más humano y confiable.
+        </p>
+      </div>
+
+      <!-- Columna centro (Dirección + contacto) -->
+      <div class="col-lg-4 col-md-6 footer-contact">
+        <h5>Información de Contacto</h5>
+        <ul>
+          <li><strong>Dirección:</strong> Calle 5 #10-23, Cali - Colombia</li>
+          <li><strong>Teléfono:</strong> +57 305 750 5634</li>
+          <li><strong>Email:</strong> contacto@lamanchaamarilla.com</li>
+        </ul>
+      </div>
+
+      <!-- Columna derecha (Redes sociales en grid) -->
+      <div class="col-lg-4 col-md-12 footer-social">
+        <h5>Síguenos</h5>
+        <div class="social-grid">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p>© 2025 La Mancha Amarilla. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+
+
+
+</body>
+
+<script>
+ // 🔹 Script emisora fija abajo 
+// 🔹 Script Player
+const playBtn = document.getElementById("playBtn");
+const radio = document.getElementById("radio");
+const volumeBtn = document.getElementById("volumeBtn");
+const volumeSlider = document.getElementById("volumeSlider");
+let isPlaying = false;
+
+// Play / Pause
+playBtn.addEventListener("click", () => {
+  if (isPlaying) {
+    radio.pause();
+    playBtn.innerHTML = '<i class="fas fa-play"></i>';
+  } else {
+    radio.play();
+    playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+  }
+  isPlaying = !isPlaying;
+});
+
+// Mostrar/Ocultar control de volumen (horizontal)
+volumeBtn.addEventListener("click", () => {
+  volumeSlider.style.display =
+    volumeSlider.style.display === "block" ? "none" : "block";
+});
+
+// Ajustar volumen
+volumeSlider.addEventListener("input", (e) => {
+  radio.volume = e.target.value;
+});
+
+
+ // menu responsive 
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+//======================TESTIMONIOS=================================
+
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
+    }
+  });
+
+
+</script>
+
+
+</html>
