@@ -692,64 +692,122 @@ body {
 
 /* emisora fija abajo*/
 
-/* 🔹 Estilos Radio Player */
-.radio-player {
+/* 🎧 Contenedor principal */
+.radio-bar {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
+  height: 90px;
   background: #000;
-  padding: 12px 20px;
+  border-top: 2px solid #FFD700;
+  overflow: hidden;
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 15px;
+  justify-content: center;
   z-index: 9999;
-  box-shadow: 0 -4px 8px rgba(0,0,0,0.4);
 }
 
-/* Botón Play */
-#playBtn {
-  background: #FFD700; /* Amarillo */
-  color: #000;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
+/* 🌊 Fondo animado */
+.wave-background {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255, 215, 0, 0.8) 0px,
+    rgba(255, 215, 0, 0.8) 1px,
+    transparent 2px,
+    transparent 4px
+  );
+  animation: moveWaves 1.6s ease-in-out infinite alternate;
+  opacity: 0.35;
+  clip-path: polygon(
+    0% 60%, 10% 50%, 20% 60%, 30% 40%, 40% 55%, 
+    50% 30%, 60% 55%, 70% 40%, 80% 60%, 90% 50%, 100% 60%
+  );
+  z-index: 1;
+}
+
+@keyframes moveWaves {
+  0% {
+    clip-path: polygon(
+      0% 60%, 10% 50%, 20% 60%, 30% 40%, 40% 55%, 
+      50% 30%, 60% 55%, 70% 40%, 80% 60%, 90% 50%, 100% 60%
+    );
+  }
+  100% {
+    clip-path: polygon(
+      0% 40%, 10% 60%, 20% 45%, 30% 60%, 40% 35%, 
+      50% 65%, 60% 40%, 70% 55%, 80% 45%, 90% 65%, 100% 40%
+    );
+  }
+}
+
+/* 🟡 Contenido centrado */
+.radio-content {
+  position: relative;
+  z-index: 2;
+  color: #FFD700;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 🎙️ Texto */
+.radio-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+/* 🎛️ Botones */
+.radio-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* 🔘 Botones de control */
+.radio-controls button {
+  background: none;
+  border: 2px solid #FFD700;
+  color: #FFD700;
   font-size: 20px;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-#playBtn:hover {
-  background: #fff;
+.radio-controls button:hover {
+  background: #FFD700;
   color: #000;
+  transform: scale(1.1);
 }
 
-/* 🔹 Volumen con icono */
-.volume-control {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  position: relative;
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+  .radio-bar {
+    height: 100px;
+  }
+  .radio-title {
+    font-size: 1rem;
+  }
+  .radio-controls {
+    gap: 10px;
+  }
 }
 
-#volumeBtn {
-  background: transparent;
-  border: none;
-  color: #FFD700;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-#volumeBtn:hover {
-  color: #fff;
-}
-
-/* Slider oculto por defecto */
-#volumeSlider {
-  display: none;
-  width: 100px;
-  cursor: pointer;
-  accent-color: #FFD700; /* Amarillo moderno */
+@media (max-width: 480px) {
+  .radio-title {
+    font-size: 0.9rem;
+  }
+  .radio-controls button {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
 }

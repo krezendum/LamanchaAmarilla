@@ -362,17 +362,22 @@
 
 
 <!-- Player emisora -->
-<!-- 🔹 Radio Player Fijo Abajo -->
-<div class="radio-player">
-  <button id="playBtn"><i class="fas fa-play"></i></button>
+<!-- 🎧 Barra emisora -->
+<div class="radio-bar">
+  <div class="radio-content">
+    <span class="radio-title">🎙️ Emisora virtual <strong>LaManchaAmarilla.com</strong></span>
 
-  <div class="volume-control">
-    <button id="volumeBtn"><i class="fas fa-volume-up"></i></button>
-    <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.5">
+    <div class="radio-controls">
+      <button id="playBtn"><i class="fas fa-play"></i></button>
+      <button id="muteBtn"><i class="fas fa-volume-up"></i></button>
+    </div>
   </div>
 
-  <audio id="radio" src="https://tuservidor.com/stream.mp3"></audio>
+  <div class="wave-background"></div>
+
+  <audio id="radio" src="https://tuservidor.com/stream.mp3" preload="none"></audio>
 </div>
+
 
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
@@ -429,34 +434,37 @@
 <script>
  // 🔹 Script emisora fija abajo 
 // 🔹 Script Player
-const playBtn = document.getElementById("playBtn");
-const radio = document.getElementById("radio");
-const volumeBtn = document.getElementById("volumeBtn");
-const volumeSlider = document.getElementById("volumeSlider");
+const playBtn = document.getElementById('playBtn');
+const muteBtn = document.getElementById('muteBtn');
+const radio = document.getElementById('radio');
+
 let isPlaying = false;
 
-// Play / Pause
-playBtn.addEventListener("click", () => {
-  if (isPlaying) {
-    radio.pause();
-    playBtn.innerHTML = '<i class="fas fa-play"></i>';
+// ▶️ Reproducir / Pausar
+playBtn.addEventListener('click', () => {
+  if (!isPlaying) {
+    radio.play()
+      .then(() => {
+        isPlaying = true;
+        playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+      })
+      .catch(err => console.log('Error al reproducir:', err));
   } else {
-    radio.play();
-    playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+    radio.pause();
+    isPlaying = false;
+    playBtn.innerHTML = '<i class="fas fa-play"></i>';
   }
-  isPlaying = !isPlaying;
 });
 
-// Mostrar/Ocultar control de volumen (horizontal)
-volumeBtn.addEventListener("click", () => {
-  volumeSlider.style.display =
-    volumeSlider.style.display === "block" ? "none" : "block";
+// 🔇 Silenciar / Activar sonido
+muteBtn.addEventListener('click', () => {
+  radio.muted = !radio.muted;
+  muteBtn.innerHTML = radio.muted 
+    ? '<i class="fas fa-volume-mute"></i>' 
+    : '<i class="fas fa-volume-up"></i>';
 });
 
-// Ajustar volumen
-volumeSlider.addEventListener("input", (e) => {
-  radio.volume = e.target.value;
-});
+
 
 
  // menu responsive 
