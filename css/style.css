@@ -34,16 +34,53 @@ body {
 }
 
 /* Redes sociales */
-.social-icons a {
-  color: #000; /* íconos negros */
-  margin-left: 12px;
-  font-size: 18px;
-  transition: color 0.3s ease;
+/* Redes sociales con colores oficiales */
+.social-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
-.social-icons a:hover {
-  color: #fff; /* íconos blancos al hover */
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 18px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+/* Colores oficiales */
+.social-icons a[href*="facebook"] {
+  background-color: #1877F2; /* Azul Facebook */
+}
+
+.social-icons a[href*="x.com"],
+.social-icons a[href*="twitter"] {
+  background-color: #000000; /* Negro X (Twitter) */
+}
+
+.social-icons a[href*="instagram"] {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.social-icons a[href*="youtube"] {
+  background-color: #FF0000; /* Rojo YouTube */
+}
+
+.social-icons a[href*="tiktok"] {
+  background-color: #000000; /* Negro TikTok */
+}
+
+/* Hover */
+.social-icons a:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
 
 /* Navbar */
 .navbar {
@@ -597,7 +634,7 @@ body {
 /* Redes sociales en grid */
 .footer-social .social-grid {
   display: grid;
-  grid-template-columns: repeat(3, 50px); /* 3 columnas */
+  grid-template-columns: repeat(3, 50px);
   gap: 12px;
 }
 
@@ -607,17 +644,41 @@ body {
   justify-content: center;
   width: 50px;
   height: 50px;
-  background-color: #111;
+  border-radius: 8px;
   color: #fff;
   font-size: 1.2rem;
-  border-radius: 4px;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.footer-social .social-grid a:hover {
-  background-color: #FFD300;
-  color: #000;
+/* Colores oficiales */
+.footer-social .social-grid a.facebook {
+  background-color: #1877F2;
 }
+
+.footer-social .social-grid a.x {
+  background-color: #000000;
+  border: 2px solid #fff; /* borde blanco para destacar */
+}
+
+.footer-social .social-grid a.instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.footer-social .social-grid a.youtube {
+  background-color: #FF0000;
+}
+
+.footer-social .social-grid a.tiktok {
+  background-color: #000000;
+  border: 2px solid #fff; /* borde blanco para distinguirlo */
+}
+
+/* Hover */
+.footer-social .social-grid a:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
 
 .footer-bottom {
   border-top: 1px solid #222;
