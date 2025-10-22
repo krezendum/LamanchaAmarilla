@@ -67,7 +67,7 @@
 <!-- HERO SECTION -->
 <section id="Hero" class="hero position-relative">
   <video autoplay muted loop playsinline class="hero-video">
-    <source src="play/hero-2.mp4" type="video/mp4">
+    <source src="play/HERO-1.mp4" type="video/mp4">
     Tu navegador no soporta videos HTML5.
   </video>
 
@@ -365,18 +365,23 @@
 <!-- 🎧 Barra emisora -->
 <div class="radio-bar">
   <div class="radio-content">
+    <!-- Texto a la izquierda -->
     <span class="radio-title">🎙️ Emisora virtual <strong>LaManchaAmarilla.com</strong></span>
 
-    <div class="radio-controls">
-      <button id="playBtn"><i class="fas fa-play"></i></button>
-      <button id="muteBtn"><i class="fas fa-volume-up"></i></button>
+    <!-- Controles al centro -->
+    <div class="radio-center">
+      <button id="playBtn" class="radio-btn"><i class="fas fa-play"></i></button>
+      <div class="wave-animation">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <button id="muteBtn" class="radio-btn"><i class="fas fa-volume-up"></i></button>
     </div>
   </div>
 
-  <div class="wave-background"></div>
-
   <audio id="radio" src="https://tuservidor.com/stream.mp3" preload="none"></audio>
 </div>
+
 
 
 <!-- ================= FOOTER ================= -->
@@ -402,7 +407,7 @@
       <div class="col-lg-3 col-md-6 footer-contact mb-4 mb-lg-0">
         <h5>Información de Contacto</h5>
         <ul>
-          <li><strong>Email:</strong> contacto@lamanchaamarilla.com</li>
+          <li><strong>Email:</strong> LamanchaamarillaVirtual@gmail.com</li>
         </ul>
       </div>
 

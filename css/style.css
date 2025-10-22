@@ -12,8 +12,8 @@ body {
 /* Top bar ======== HEADER =============  */
 /* Top bar */
 .top-bar {
-  background: #FFD700; /* amarillo */
-  color: #000; /* texto negro */
+  background: #000; /* amarillo */
+  color: #FFD700; /* texto negro */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,7 +22,7 @@ body {
 }
 
 .top-bar .apps a {
-  color: #000; /* texto negro */
+  color: #ffffff; /* texto negro */
   text-decoration: none;
   margin-right: 12px;
   font-weight: 500;
@@ -30,7 +30,7 @@ body {
 }
 
 .top-bar .apps a:hover {
-  color: #fff; /* hover blanco */
+  color: #FFD700; /* hover blanco */
 }
 
 /* Redes sociales */
@@ -84,7 +84,7 @@ body {
 
 /* Navbar */
 .navbar {
-  background: #000; /* negro */
+  background: #FFD700; /* negro */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -104,7 +104,7 @@ body {
 }
 
 .nav-links li a {
-  color: white;
+  color: black;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
@@ -112,7 +112,7 @@ body {
 }
 
 .nav-links li a:hover {
-  color: #FFD700; /* hover amarillo */
+  color: #ffffff; /* hover amarillo */
 }
 
 /* Toggle (móvil) */
@@ -132,7 +132,7 @@ body {
     left: -100%; /* oculto fuera de pantalla */
     width: 100%;
     height: 100vh;
-    background-color: #111;
+    background-color: #FFD700;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -331,9 +331,10 @@ body {
 }
 
 .empresa-card:hover {
-  transform: scale(1.08);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transform: scale(1.1);
+  box-shadow: 0 0 40px rgba(255, 211, 0, 1); /* sombra amarilla intensa */
 }
+
 
 .empresa-card img {
   max-width: 100%;
@@ -352,7 +353,7 @@ body {
   font-weight: 600;
   font-size: 1rem;
   margin: 0;
-  color: #111;
+  color: #111111;
 }
 
 /* Ocultar flechas del carrusel */
@@ -543,6 +544,28 @@ body {
   font-size: 18px;
 }
 
+/* Ocultar flechas y puntos del slider en responsive */
+.swiper-button-prev,
+.swiper-button-next,
+.owl-prev,
+.owl-next {
+  display: none !important;
+}
+
+.swiper-pagination,
+.owl-dots {
+  display: none !important;
+}
+
+/* También puedes asegurarte de que no aparezcan al tocar o enfocar */
+.swiper-button-prev:focus,
+.swiper-button-next:focus,
+.owl-prev:focus,
+.owl-next:focus {
+  outline: none !important;
+}
+
+
 /* ================= ÚNETE A LA MANCHA AMARILLA ================= */
 .unete-section {
   background-color: #000; /* Negro para contraste */
@@ -692,122 +715,113 @@ body {
 
 /* emisora fija abajo*/
 
-/* 🎧 Contenedor principal */
+/* ================= RADIO PLAYER ================= */
 .radio-bar {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 90px;
   background: #000;
-  border-top: 2px solid #FFD700;
-  overflow: hidden;
+  color: #fff;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  padding: 12px 25px;
+  box-shadow: 0 -3px 10px rgba(255, 215, 0, 0.3);
   z-index: 9999;
 }
 
-/* 🌊 Fondo animado */
-.wave-background {
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    90deg,
-    rgba(255, 215, 0, 0.8) 0px,
-    rgba(255, 215, 0, 0.8) 1px,
-    transparent 2px,
-    transparent 4px
-  );
-  animation: moveWaves 1.6s ease-in-out infinite alternate;
-  opacity: 0.35;
-  clip-path: polygon(
-    0% 60%, 10% 50%, 20% 60%, 30% 40%, 40% 55%, 
-    50% 30%, 60% 55%, 70% 40%, 80% 60%, 90% 50%, 100% 60%
-  );
-  z-index: 1;
-}
-
-@keyframes moveWaves {
-  0% {
-    clip-path: polygon(
-      0% 60%, 10% 50%, 20% 60%, 30% 40%, 40% 55%, 
-      50% 30%, 60% 55%, 70% 40%, 80% 60%, 90% 50%, 100% 60%
-    );
-  }
-  100% {
-    clip-path: polygon(
-      0% 40%, 10% 60%, 20% 45%, 30% 60%, 40% 35%, 
-      50% 65%, 60% 40%, 70% 55%, 80% 45%, 90% 65%, 100% 40%
-    );
-  }
-}
-
-/* 🟡 Contenido centrado */
 .radio-content {
-  position: relative;
-  z-index: 2;
-  color: #FFD700;
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: center; /* 👈 Todo centrado */
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'Poppins', sans-serif;
 }
 
-/* 🎙️ Texto */
+/* Texto */
 .radio-title {
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  white-space: nowrap;
 }
 
-/* 🎛️ Botones */
-.radio-controls {
+/* Contenedor central */
+.radio-center {
   display: flex;
   align-items: center;
-  gap: 15px;
+  justify-content: center;
+  gap: 18px;
 }
 
-/* 🔘 Botones de control */
-.radio-controls button {
-  background: none;
-  border: 2px solid #FFD700;
-  color: #FFD700;
-  font-size: 20px;
+/* Botones */
+.radio-btn {
+  background: #FFD700;
+  color: #000;
+  border: none;
   border-radius: 50%;
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.radio-controls button:hover {
-  background: #FFD700;
-  color: #000;
+.radio-btn:hover {
   transform: scale(1.1);
+  box-shadow: 0 0 10px #FFD700;
 }
 
-/* 📱 Responsivo */
+/* Ondas */
+.wave-animation {
+  display: flex;
+  align-items: flex-end;
+  height: 35px;
+  gap: 5px;
+  width: 160px; /* 👈 más ancho */
+  justify-content: center;
+}
+
+.wave-animation span {
+  display: block;
+  width: 6px;
+  background: #FFD700;
+  border-radius: 4px;
+  animation: wave 1.2s ease-in-out infinite;
+}
+
+/* Más ondas y ritmo */
+.wave-animation span:nth-child(1) { height: 10px; animation-delay: 0s; }
+.wave-animation span:nth-child(2) { height: 18px; animation-delay: 0.1s; }
+.wave-animation span:nth-child(3) { height: 28px; animation-delay: 0.2s; }
+.wave-animation span:nth-child(4) { height: 35px; animation-delay: 0.3s; }
+.wave-animation span:nth-child(5) { height: 22px; animation-delay: 0.4s; }
+.wave-animation span:nth-child(6) { height: 30px; animation-delay: 0.5s; }
+.wave-animation span:nth-child(7) { height: 15px; animation-delay: 0.6s; }
+.wave-animation span:nth-child(8) { height: 25px; animation-delay: 0.7s; }
+.wave-animation span:nth-child(9) { height: 33px; animation-delay: 0.8s; }
+.wave-animation span:nth-child(10) { height: 20px; animation-delay: 0.9s; }
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(0.5); opacity: 0.8; }
+  50% { transform: scaleY(1.3); opacity: 1; }
+}
+
+
+/* Responsive */
 @media (max-width: 768px) {
-  .radio-bar {
-    height: 100px;
-  }
-  .radio-title {
-    font-size: 1rem;
-  }
-  .radio-controls {
+  .radio-content {
+    flex-direction: column;
+    text-align: center;
     gap: 10px;
   }
-}
-
-@media (max-width: 480px) {
   .radio-title {
     font-size: 0.9rem;
-  }
-  .radio-controls button {
-    width: 38px;
-    height: 38px;
-    font-size: 18px;
   }
 }
